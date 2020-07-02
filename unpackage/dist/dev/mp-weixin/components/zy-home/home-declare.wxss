@@ -1,0 +1,23 @@
+.container.data-v-ab1f394e {
+  margin: 35px 35px 15px 35px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.container .item.data-v-ab1f394e {
+  height: 74px;
+  width: 25%;
+  text-align: center;
+}
+.container .item .img.data-v-ab1f394e {
+  width: 30px;
+  height: 30px;
+}
+.container .item .text.data-v-ab1f394e {
+  font-size: 14px;
+  color: #666666;
+}
+

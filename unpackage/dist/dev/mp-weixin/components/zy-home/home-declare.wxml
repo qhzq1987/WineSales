@@ -1,0 +1,1 @@
+<view class="container data-v-ab1f394e"><block wx:for="{{showData}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="item data-v-ab1f394e"><image class="img data-v-ab1f394e" src="{{'../../static/imgs/home_'+item.tag+'.png'}}"></image><view class="text data-v-ab1f394e">{{item.name}}</view></view></block></view>
