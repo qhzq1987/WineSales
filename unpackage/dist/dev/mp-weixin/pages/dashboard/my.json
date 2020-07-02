@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "我的",
-  "usingComponents": {}
+  "usingComponents": {
+    "order": "/components/zy-my/my-order",
+    "cells": "/components/zy-my/my-cells"
+  }
 }

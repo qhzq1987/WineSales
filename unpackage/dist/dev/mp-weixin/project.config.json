@@ -20,11 +20,13 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "",
-	"appid": "touristappid",
+	"appid": "wx933ba77a679fed21",
 	"projectname": "wine-sales",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},

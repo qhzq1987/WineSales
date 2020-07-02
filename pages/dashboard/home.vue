@@ -12,9 +12,9 @@
 			<swiper-item v-for="(item, index) in ads" :key="index"><image class="img" :src="item.imgUrl"></image></swiper-item>
 		</swiper>
 		<!-- 公告 -->
-		<notices class="notice-container" :show-data="notices"></notices>
+		<notices :show-data="notices" @notices-click="onNotices"></notices>
 		<!-- 活动入口 -->
-		<acts class="act-container" @act-click="onAct" ref="refacts"></acts>
+		<acts @act-click="onAct" ref="refacts"></acts>
 		<!-- 优惠入口 -->
 		<view class="pro-container" @click="onAct(99)"><view class="item">浓香经典 双瓶钜惠</view></view>
 		<!-- 申明 -->
@@ -23,9 +23,9 @@
 </template>
 
 <script>
-import notices from '../../components/home-notices.vue';
-import acts from '../../components/home-acts.vue';
-import declare from '../../components/home-declare.vue';
+import notices from '../../components/zy-home/home-notices.vue';
+import acts from '../../components/zy-home/home-acts.vue';
+import declare from '../../components/zy-home/home-declare.vue';
 export default {
 	components: {
 		notices,
@@ -79,6 +79,14 @@ export default {
 		onAct(tIndex) {
 			alert(tIndex);
 		},
+		onNotices() {
+			// 跳转消息通知
+			uni.navigateTo({
+				url: '../home/notices',
+				animationType: 'slide-in-right',
+				animationDuration: 200
+			})
+		},
 		reformNotice(nObj) {
 			// 如果是单条数，则补齐双数，如果1、3、5、7...则要补为：2、4、6、8
 			let sourceObj = nObj;
@@ -115,15 +123,6 @@ export default {
 		height: 100%;
 	}
 }
-
-.notice-container {
-	margin-top: 10px;
-}
-
-.act-container {
-	margin-top: 10px;
-}
-
 .pro-container {
 	background-color: #ffffff;
 	height: 119px;
@@ -132,10 +131,10 @@ export default {
 		margin: 0px 15px 0px 15px;
 		height: 104px;
 		border-radius: 3px;
-		background-color: #f4624a;
 		color: #ffffff;
 		font-size: 24px;
 		line-height: 94px;
+		background-color: #f4624a;
 	}
 }
 </style>

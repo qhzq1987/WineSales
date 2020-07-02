@@ -3,7 +3,8 @@
     "pages/dashboard/home",
     "pages/dashboard/categories",
     "pages/dashboard/cart",
-    "pages/dashboard/my"
+    "pages/dashboard/my",
+    "pages/home/notices"
   ],
   "subPackages": [],
   "window": {
@@ -49,5 +50,6 @@
     "borderStyle": "black",
     "backgroundColor": "#FFFFFF"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap39.json"
 }
