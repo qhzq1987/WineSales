@@ -4,7 +4,11 @@
     "pages/dashboard/categories",
     "pages/dashboard/cart",
     "pages/dashboard/my",
-    "pages/home/notices"
+    "pages/home/notices",
+    "pages/categories/productdetail",
+    "pages/my/favorit",
+    "pages/my/coupon",
+    "pages/my/setting"
   ],
   "subPackages": [],
   "window": {
@@ -51,5 +55,5 @@
     "backgroundColor": "#FFFFFF"
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap39.json"
+  "sitemapLocation": "sitemap55.json"
 }

@@ -1,0 +1,9 @@
+.search.data-v-3f1c30b4 {
+  background-color: #FFFFFF;
+  padding: 5px 8px 0px 8px;
+}
+.search .seperator.data-v-3f1c30b4 {
+  background-color: #eeeeee;
+  height: 1px;
+}
+

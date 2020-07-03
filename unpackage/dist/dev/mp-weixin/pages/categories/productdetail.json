@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "cell": "/components/zy-categories/categories-cell"
+  }
+}

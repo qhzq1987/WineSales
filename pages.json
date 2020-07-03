@@ -1,32 +1,50 @@
 {
 	"pages": [{
-			"path": "pages/dashboard/home",
-			"style": {
-				"navigationBarTitleText": "首页"
-			}
-		}, {
-			"path": "pages/dashboard/categories",
-			"style": {
-				"navigationBarTitleText": "商品分类"
-			}
-		}, {
-			"path": "pages/dashboard/cart",
-			"style": {
-				"navigationBarTitleText": "购物车"
-			}
-		}, {
-			"path": "pages/dashboard/my",
-			"style": {
-				"navigationBarTitleText": "我的"
-			}
-		},
-		{
-			"path": "pages/home/notices",
-			"style": {
-				"navigationBarTitleText": "公告消息"
-			}
+		"path": "pages/dashboard/home",
+		"style": {
+			"navigationBarTitleText": "首页"
 		}
-	],
+	}, {
+		"path": "pages/dashboard/categories",
+		"style": {
+			"navigationBarTitleText": "商品分类"
+		}
+	}, {
+		"path": "pages/dashboard/cart",
+		"style": {
+			"navigationBarTitleText": "购物车"
+		}
+	}, {
+		"path": "pages/dashboard/my",
+		"style": {
+			"navigationBarTitleText": "我的"
+		}
+	}, {
+		"path": "pages/home/notices",
+		"style": {
+			"navigationBarTitleText": "公告消息"
+		}
+	}, {
+		"path": "pages/categories/productdetail",
+		"style": {
+			"navigationBarTitleText": "商品详情"
+		}
+	}, {
+		"path": "pages/my/favorit",
+		"style": {
+			"navigationBarTitleText": "我的收藏"
+		}
+	}, {
+		"path": "pages/my/coupon",
+		"style": {
+			"navigationBarTitleText": "优惠券"
+		}
+	}, {
+		"path": "pages/my/setting",
+		"style": {
+			"navigationBarTitleText": "设置"
+		}
+	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "",

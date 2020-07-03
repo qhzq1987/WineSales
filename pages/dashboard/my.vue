@@ -48,6 +48,11 @@ export default {
 		},
 		onSelected(cIndex) {
 			console.log('点击 = ' + cIndex)
+			uni.navigateTo({
+				url: '../my/setting?index=' + cIndex,
+				animationDuration: 200,
+				animationType: 'slide-in-right'
+			})
 		}
 	}
 };

@@ -1,0 +1,1 @@
+<view class="data-v-3f1c30b4"><view class="search data-v-3f1c30b4"><uni-search-bar vue-id="2dcb8e20-1" placeholder="搜索" cancelButton="none" maxlength="20" data-event-opts="{{[['^confirm',[['onSearch']]]]}}" bind:confirm="__e" class="data-v-3f1c30b4" bind:__l="__l"></uni-search-bar></view></view>
