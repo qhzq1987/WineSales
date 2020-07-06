@@ -16,34 +16,42 @@
 		</view>
 		<view class="pro-container">
 			<view class="seperator"></view>
-			<view></view>
-			<view>
-				<text>优惠</text>
-				<text>456454545456</text>
-			</view>
-			<view>
-				<text>优惠2</text>
-				<text>第个消息456454545456</text>
+			<view v-for="(item, index) in prdInfo.proInfos" :key="index">
+				<text class="type">{{ item.type }}</text>
+				<text class="content">{{ item.content }}</text>
 			</view>
 		</view>
-		<view class="prd-spec">
-			<text>商品规格</text>
+		<view class="prd-spec" @click="onSepc">
+			<text class="title">商品规格</text>
+			<!-- 箭头、选择值都是‘右’浮动，所以排版从右至左排版 -->
+			<image class="arrow" src="../../static/imgs/arrow_right.png"></image>
+			<text class="value">{{ specsTxt }}</text>
 		</view>
+		<view class="prd-detail"><text class="title">商品详情</text></view>
+		<!-- 底部操作 -->
+		<btmopts :favorit="prdInfo.favorit" @go-cart="onGoCart" @favorit="onFavorit" @add-cart="onAddCart" @buy-now="onBuyNow"></btmopts>
+		<!-- 规格弹出 -->
+		<uni-popup ref="refpopup" type="bottom">
+			<spec :price="prdInfo.price" :showSpecs="prdInfo.specs" @add-cart="onAddCart" @buy-now="onBuyNow"></spec>
+		</uni-popup>
 	</view>
 </template>
 
 <script>
-import cell from '../../components/zy-categories/categories-cell.vue';
+import btmopts from '../../components/zy-categories/detail-opts.vue';
+import spec from '../../components/zy-categories/detail-spec.vue';
 export default {
 	components: {
-		cell
+		spec,
+		btmopts
 	},
 	data() {
 		return {
 			prdImgs: [],
 			prdId: '',
 			prdInfo: {},
-			currPage: 1
+			currPage: 1,
+			specsTxt: '请选择'
 		};
 	},
 	onLoad(params) {
@@ -60,20 +68,40 @@ export default {
 			prdName: '44茅台镇酱香型白酒53度纯粮食原浆陈年窖藏老酒125毫升单瓶厂家',
 			price: '145.00',
 			proInfos: [{ type: '满赠', content: '满499赠熊猫酒具一套' }, { type: '津贴', content: '下单立减15元' }],
-			specs: ['1件（500ml*2瓶）']
+			specs: ['1件(500ml*2瓶)', '1瓶(500ml)', '1箱(500*6瓶)'],
+			favorit: 0
 		};
 	},
 	methods: {
-		onSearch(sObj) {
-			// 当前值
-			this.searchText = sObj.value;
-		},
 		onSwiperChange(event) {
 			// 当前页
 			this.currPage = event.detail.current + 1;
 		},
 		onShare() {
-			console.log('share...')
+			console.log('share...');
+		},
+		onSepc() {
+			// 规格
+			this.$refs.refpopup.open();
+		},
+		onAddCart() {
+			uni.showToast({
+				title: '已加入购物车',
+				duration: 1500,
+				success: () => {
+					this.$refs.refpopup.close();
+				}
+			});
+		},
+		onBuyNow() {
+			console.log('生成订单...');
+		},
+		onGoCart() {
+			console.log('购物车');
+		},
+		onFavorit() {
+			// 是否收藏？
+			this.prdInfo.favorit = this.prdInfo.favorit === 1 ? 0 : 1;
 		}
 	}
 };
@@ -113,13 +141,13 @@ export default {
 	padding-bottom: 2px;
 	font-size: 19px;
 	color: #333333;
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 }
 .prd-price {
 	padding-left: 15px;
 	padding-bottom: 10px;
 	color: #fc511f;
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	.sign {
 		font-size: 15px;
 	}
@@ -135,17 +163,55 @@ export default {
 	margin-right: 15px;
 }
 .pro-container {
-	// height: 74px;
-	background-color: #FFFFFF;
+	background-color: #ffffff;
+	padding-bottom: 10px;
 	.seperator {
 		background-color: #eeeeee;
 		height: 1px;
 		margin-left: 15px;
-		margin-right: 0px;
+		margin-bottom: 6px;
+	}
+	.type {
+		margin-left: 15px;
+		padding: 0px 4px 0px 4px;
+		font-size: 10px;
+		background-color: #fc511f;
+		color: #ffffff;
+		border-radius: 3px;
+	}
+	.content {
+		font-size: 13px;
+		padding-left: 7px;
 	}
 }
 .prd-spec {
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	margin-top: 10px;
+	padding: 15px 0px 15px 15px;
+	.title {
+		color: #333333;
+		font-size: 15px;
+	}
+	.arrow {
+		float: right;
+		margin-right: 12px;
+		width: 20px;
+		height: 20px;
+	}
+	.value {
+		color: #999999;
+		font-size: 15px;
+		float: right;
+		margin-right: 5px;
+	}
+}
+.prd-detail {
+	background-color: #ffffff;
+	margin-top: 10px;
+	padding: 15px 0px 15px 15px;
+	.title {
+		color: #333333;
+		font-size: 15px;
+	}
 }
 </style>

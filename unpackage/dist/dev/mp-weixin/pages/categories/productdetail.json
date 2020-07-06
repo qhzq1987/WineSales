@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "商品详情",
   "usingComponents": {
-    "cell": "/components/zy-categories/categories-cell"
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "spec": "/components/zy-categories/detail-spec",
+    "btmopts": "/components/zy-categories/detail-opts"
   }
 }

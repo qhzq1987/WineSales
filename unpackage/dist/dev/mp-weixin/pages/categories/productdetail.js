@@ -92,7 +92,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
+var components = {
+  uniPopup: function() {
+    return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 140))
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -130,7 +134,13 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var cell = function cell() {__webpack_require__.e(/*! require.ensure | components/zy-categories/categories-cell */ "components/zy-categories/categories-cell").then((function () {return resolve(__webpack_require__(/*! ../../components/zy-categories/categories-cell.vue */ 119));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var btmopts = function btmopts() {__webpack_require__.e(/*! require.ensure | components/zy-categories/detail-opts */ "components/zy-categories/detail-opts").then((function () {return resolve(__webpack_require__(/*! ../../components/zy-categories/detail-opts.vue */ 147));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var spec = function spec() {__webpack_require__.e(/*! require.ensure | components/zy-categories/detail-spec */ "components/zy-categories/detail-spec").then((function () {return resolve(__webpack_require__(/*! ../../components/zy-categories/detail-spec.vue */ 154));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
 
 
 
@@ -168,14 +178,16 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 {
   components: {
-    cell: cell },
+    spec: spec,
+    btmopts: btmopts },
 
   data: function data() {
     return {
       prdImgs: [],
       prdId: '',
       prdInfo: {},
-      currPage: 1 };
+      currPage: 1,
+      specsTxt: '请选择' };
 
   },
   onLoad: function onLoad(params) {
@@ -192,21 +204,42 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       prdName: '44茅台镇酱香型白酒53度纯粮食原浆陈年窖藏老酒125毫升单瓶厂家',
       price: '145.00',
       proInfos: [{ type: '满赠', content: '满499赠熊猫酒具一套' }, { type: '津贴', content: '下单立减15元' }],
-      specs: ['1件（500ml*2瓶）'] };
+      specs: ['1件(500ml*2瓶)', '1瓶(500ml)', '1箱(500*6瓶)'],
+      favorit: 0 };
 
   },
   methods: {
-    onSearch: function onSearch(sObj) {
-      // 当前值
-      this.searchText = sObj.value;
-    },
     onSwiperChange: function onSwiperChange(event) {
       // 当前页
       this.currPage = event.detail.current + 1;
     },
     onShare: function onShare() {
       console.log('share...');
+    },
+    onSepc: function onSepc() {
+      // 规格
+      this.$refs.refpopup.open();
+    },
+    onAddCart: function onAddCart() {var _this = this;
+      uni.showToast({
+        title: '已加入购物车',
+        duration: 1500,
+        success: function success() {
+          _this.$refs.refpopup.close();
+        } });
+
+    },
+    onBuyNow: function onBuyNow() {
+      console.log('生成订单...');
+    },
+    onGoCart: function onGoCart() {
+      console.log('购物车');
+    },
+    onFavorit: function onFavorit() {
+      // 是否收藏？
+      this.prdInfo.favorit = this.prdInfo.favorit === 1 ? 0 : 1;
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
