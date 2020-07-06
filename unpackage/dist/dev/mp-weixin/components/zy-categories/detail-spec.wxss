@@ -1,0 +1,105 @@
+.container.data-v-b549fe32 {
+  background-color: #ffffff;
+}
+.container .price.data-v-b549fe32 {
+  padding-left: 15px;
+  padding-top: 20px;
+  color: #fc511f;
+  font-size: 25px;
+  font-weight: 700;
+}
+.container .spec-title.data-v-b549fe32 {
+  font-size: 17px;
+  color: #333333;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.container .spec-tag.data-v-b549fe32 {
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.container .spec-tag .tag.data-v-b549fe32 {
+  border-radius: 11px;
+  height: 22px;
+  font-size: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 15px;
+}
+.container .spec-tag .tag-normal.data-v-b549fe32 {
+  border: #666666 1px solid;
+  color: #666666;
+}
+.container .spec-tag .tag-selected.data-v-b549fe32 {
+  border: #fc511f 1px solid;
+  color: #fc511f;
+}
+.container .quantity-title.data-v-b549fe32 {
+  font-size: 17px;
+  color: #333333;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+.container .quantity-value.data-v-b549fe32 {
+  margin-left: 15px;
+  margin-top: 8px;
+  height: 38px;
+  width: 114px;
+  border-radius: 19px;
+  border: #666666 1px solid;
+  font-size: 19px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  line-height: 34px;
+}
+.container .quantity-value .opt-minus.data-v-b549fe32 {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #333333;
+}
+.container .quantity-value .value.data-v-b549fe32 {
+  color: #333333;
+  width: 114px;
+  text-align: center;
+}
+.container .quantity-value .opt-plus.data-v-b549fe32 {
+  color: #fc511f;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container .opts.data-v-b549fe32 {
+  margin: 40px 15px 0px 15px;
+  height: 44px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  line-height: 44px;
+  color: #ffffff;
+  padding-bottom: 50px;
+}
+.container .opts .add-cart.data-v-b549fe32 {
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+  background-color: #57bdff;
+}
+.container .opts .buy-now.data-v-b549fe32 {
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+  background-color: #559bff;
+}
+
