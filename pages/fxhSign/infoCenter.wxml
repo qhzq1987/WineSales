@@ -1,0 +1,20 @@
+<!--infoCenter.wxml-->
+<view class="header-bg">
+  <image class="img" src="{{avatarUrl}}"></image>
+  <view class="name">{{userInfo.nickName}}</view>
+</view>
+<!-- 列表 -->
+<view class="cell-bg">
+  <view class="seperator"></view>
+  <van-cell wx:for="{{cells}}" wx:for-index="i" wx:key="i" url="{{item.navUrl}}">
+    <view slot="title">
+      <view class="cell-title">{{item.name}}</view>
+    </view>
+    <view slot="" wx:if="{{item.value}}">
+      <view class="{{item.arrow ? 'value-arrow': 'value'}}">{{item.value}}</view>
+    </view>
+    <view slot="right-icon" wx:if="{{item.arrow}}">
+      <image class="arrow" src="../../images/arrow-right.png"></image>
+    </view>
+  </van-cell>
+</view>

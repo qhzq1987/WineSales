@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="item" wx:for="{{imgs}}" wx:for-index="i" wx:key="i">
+    <view class="img-container">
+      <image class="img" src="{{ item.isAdd ? 'image-add-opt.png' : item.imgUrl}}" lazy-load="true" data-iid="{{i}}"
+      bindtap="onAdd">
+    </image>
+    </view>
+    <!-- <image class="remove" src="image-delete-opt.png" bindtap="onDelete"></image> -->
+  </view>
+</view>

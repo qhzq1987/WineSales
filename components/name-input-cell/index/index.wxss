@@ -1,0 +1,42 @@
+.container {
+  background-color: #ffffff;
+  height: 100rpx;
+}
+.container .main-body {
+  margin: 0rpx 30rpx;
+  display: flex;
+}
+.container .main-body .left {
+  width: 190rpx;
+  font-size: 30rpx;
+  color: #666666;
+  line-height: 100rpx;
+}
+.container .main-body .right {
+  flex: 1;
+}
+.container .main-body .right .text-input {
+  height: 100rpx;
+  font-size: 28rpx;
+  color: #222222;
+}
+.container .placeholder {
+  font-size: 28rpx;
+  color: #aaaaaa;
+}
+.container .seperator-left {
+  margin-left: 30rpx;
+}
+.container .seperator-all {
+  width: 100%;
+}
+.container .seperator-side {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.container .seperator {
+  margin-top: -2rpx;
+  height: 1rpx;
+  background-color: #f8f8f8;
+  z-index: 1;
+}

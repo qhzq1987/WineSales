@@ -1,45 +1,66 @@
 <template>
 	<view>
-		<!-- 基本用法 -->
-		<uni-search-bar @confirm="search" @input="input"></uni-search-bar>
-		<!-- 自定义Placeholder -->
-		<view class="container">
-			<uni-search-bar @confirm="search" @input="input"></uni-search-bar>
-		</view>
-		<uni-search-bar class="search" placeholder="搜索" cancelButton="none" maxlength="20" @confirm="onSearch"></uni-search-bar>
-		<!-- 设置圆角 -->
-		<uni-search-bar :radius="100" @confirm="search"></uni-search-bar>
+		<uni-list
+			v-for="(item, index) in products"
+			:key="index"
+			:show-arrow="false"
+			@checked="onChecked"
+			@spec-changed="onSpec"
+			@click="onDetail(item.prdId)"
+		>
+			<cell :show-data="item"></cell>
+		</uni-list>
 	</view>
 </template>
 
 <script>
+import cell from '../../components/zy-cart/cart-cell.vue';
 export default {
-	data () {
+	components: {
+		cell
+	},
+	data() {
 		return {
-			keyword: ''
-		}
+			products: []
+		};
 	},
 	methods: {
-		onSearch(sObj) {
+		onDetail(sObj) {
 			// 当前值
-			this.keyword = sObj.value
+		},
+		onChecked(cIndex) {
+			console.log('选中 = ' + cIndex);
+		},
+		onSpec() {
+			console.log('保险公司');
 		}
+	},
+	onLoad() {
+		let obj1 = {
+			prdId: 1,
+			name: '茅台镇散酒批发 53度酱香型散酒十斤桶装低价白酒 纯粮食散装白酒',
+			imgUrl: 'https://cbu01.alicdn.com/img/ibank/2019/610/602/10761206016_1924016521.220x220.jpg?_=2020',
+			subName: '酒精度：50%vol. | 清香型',
+			price: '58.00',
+			tags: ['破损包赔', '领券']
+		};
+		this.products.push(obj1)
 	}
-}
+};
 </script>
 
 <style>
-	.container {
-		width: 320px;
-		/* height: 49px; */
-		background-color: #FFFFFF;
-		margin-left: 50px;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	.search {
-		margin-left: 15px;
-		/* margin-bottom: 15px; */
-		width: 100px;
-	}
+.container {
+	width: 320px;
+	/* height: 49px; */
+	background-color: #ffffff;
+	margin-left: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.search {
+	margin-left: 15px;
+	/* margin-bottom: 15px; */
+	width: 100px;
+}
 </style>

@@ -2,7 +2,7 @@
 .container {
 	width: 320px;
 	/* height: 49px; */
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	margin-left: 50px;
 	padding-left: 10px;
 	padding-right: 10px;

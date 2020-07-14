@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "points": "/components/mine/mine-points",
+    "fx-cluster": "/components/mine/mine-functions",
+    "other-functions": "/components/mine/mine-functions"
+  }
+}

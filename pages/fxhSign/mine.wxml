@@ -1,0 +1,34 @@
+<!--mine.wxml-->
+<van-nav-bar border="false">
+  <view slot="title">
+    <text class="nav-bar-title">方心汇</text>
+  </view>
+</van-nav-bar>
+<view class="header-bg" bindtap="onInfoCenter">
+  <view class="left">
+    <image class="img" src="{{avatarUrl}}"></image>
+  </view>
+  <view class="right">
+    <text class="name">带路小妖</text>
+    <image class="editor" src="../../images/mine-name-edit.png"></image>
+    <view class="phone">{{userInfo.phone}}</view>
+  </view>
+</view>
+<!-- 积分等级 -->
+<view class="points-level-bg">
+  <view class="real-field">
+    <points points="{{points}}" level="{{level}}" statValues="{{stats}}" bind:tapevents="onPoints"></points>
+  </view>
+</view>
+<!-- 我的方心汇 -->
+<view class="fx-cluster-bg">
+  <view class="real-field">
+    <fx-cluster title="我的方心汇" showTypes="{{fxhs}}" bind:tapevent="onFxcluster"></fx-cluster>
+  </view>
+</view>
+<!-- 其他功能 -->
+<view class="other-func">
+  <view class="real-field">
+    <other-functions title="其他功能" showTypes="{{others}}" bind:tapevent="onOthers"></other-functions>
+  </view>
+</view>

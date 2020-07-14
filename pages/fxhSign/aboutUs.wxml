@@ -1,0 +1,14 @@
+<!--aboutUs.wxml-->
+<view class="img-container">
+  <image class="img" src="../../images/about-us-header.png"></image>
+</view>
+<view class="text-container">
+  <text class="info">{{infoText}}</text>
+  <text class="contact">
+    <!-- 要换行 -->
+    
+    Tel：020-66666666
+    WeChat：fangyuan666
+    Address：广州市天河区体育东路28号方圆大厦                    
+  </text>
+</view>

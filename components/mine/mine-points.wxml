@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="points-level">
+    <view class="pts">
+      <view class="title">可用积分</view>
+      <view class="value">{{points}}</view>
+    </view>
+    <view class="level">
+      <view class="title" bindtap="onLevel">查看等级</view>
+      <view class="value">{{level}}</view>
+    </view>
+  </view>
+  <view class="btm-items">
+    <view class="item" wx:for="{{statItems}}" wx:for-index="i" wx:key="i" data-pid="{{i}}" bindtap="onItems">
+      <text class="value">{{statValues[i]}}</text>
+      <view class="name">{{item}}</view>
+    </view>
+  </view>
+</view>

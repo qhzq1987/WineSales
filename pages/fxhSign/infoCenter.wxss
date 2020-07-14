@@ -1,0 +1,46 @@
+.header-bg {
+  background-color: #ffffff;
+  display: flex;
+  margin-top: 20rpx;
+  height: 140rpx;
+}
+.header-bg .img {
+  margin-left: 30rpx;
+  margin-top: 23rpx;
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 45rpx;
+  border: #eeeeee 2rpx solid;
+}
+.header-bg .name {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #222222;
+  line-height: 140rpx;
+}
+.cell-bg {
+  background-color: #ffffff;
+}
+.cell-bg .title {
+  font-size: 30rpx;
+  color: #666666;
+}
+.cell-bg .value {
+  font-size: 28rpx;
+  color: #222222;
+}
+.cell-bg .value-arrow {
+  font-size: 28rpx;
+  color: #222222;
+  margin-right: 20rpx;
+}
+.cell-bg .arrow {
+  height: 18rpx;
+  width: 18rpx;
+  margin-right: -6rpx;
+}
+.cell-bg .seperator {
+  margin-left: 30rpx;
+  height: 1rpx;
+  background-color: #F8F8F8;
+}

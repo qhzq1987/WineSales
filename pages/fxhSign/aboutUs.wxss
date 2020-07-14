@@ -1,0 +1,20 @@
+page {
+  background-color: #ffffff;
+}
+.img-container {
+  margin: 20rpx 37rpx 0rpx 37rpx ;
+}
+.img-container .img {
+  width: 100%;
+}
+.text-container {
+  margin: 20rpx 37rpx 0rpx 37rpx;
+  color: #222222;
+  line-height: 1.5;
+}
+.text-container .info {
+  font-size: 28rpx;
+}
+.text-container .contact {
+  font-size: 24rpx;
+}

@@ -93,8 +93,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
-  uniSearchBar: function() {
-    return __webpack_require__.e(/*! import() | components/uni-search-bar/uni-search-bar */ "components/uni-search-bar/uni-search-bar").then(__webpack_require__.bind(null, /*! @/components/uni-search-bar/uni-search-bar.vue */ 98))
+  uniList: function() {
+    return __webpack_require__.e(/*! import() | components/uni-list/uni-list */ "components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/components/uni-list/uni-list.vue */ 105))
   }
 }
 var render = function() {
@@ -134,32 +134,54 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var cell = function cell() {__webpack_require__.e(/*! require.ensure | components/zy-cart/cart-cell */ "components/zy-cart/cart-cell").then((function () {return resolve(__webpack_require__(/*! ../../components/zy-cart/cart-cell.vue */ 205));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
+  components: {
+    cell: cell },
+
   data: function data() {
     return {
-      keyword: '' };
+      products: [] };
 
   },
   methods: {
-    onSearch: function onSearch(sObj) {
+    onDetail: function onDetail(sObj) {
       // 当前值
-      this.keyword = sObj.value;
-    } } };exports.default = _default;
+    },
+    onChecked: function onChecked(cIndex) {
+      console.log('选中 = ' + cIndex);
+    },
+    onSpec: function onSpec() {
+      console.log('保险公司');
+    } },
+
+  onLoad: function onLoad() {
+    var obj1 = {
+      prdId: 1,
+      name: '茅台镇散酒批发 53度酱香型散酒十斤桶装低价白酒 纯粮食散装白酒',
+      imgUrl: 'https://cbu01.alicdn.com/img/ibank/2019/610/602/10761206016_1924016521.220x220.jpg?_=2020',
+      subName: '酒精度：50%vol. | 清香型',
+      price: '58.00',
+      tags: ['破损包赔', '领券'] };
+
+    this.products.push(obj1);
+  } };exports.default = _default;
 
 /***/ }),
 

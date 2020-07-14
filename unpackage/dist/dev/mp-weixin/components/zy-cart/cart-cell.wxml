@@ -1,0 +1,1 @@
+<view class="data-v-70303563"><label class="data-v-70303563"><checkbox value="cb" class="data-v-70303563">未选中</checkbox></label><view class="data-v-70303563"><radio id="{{showData.name}}" value="{{showData.name}}" checked="{{true}}" data-event-opts="{{[['change',[['onChange',['$event']]]]]}}" bindchange="__e" class="data-v-70303563"></radio></view></view>

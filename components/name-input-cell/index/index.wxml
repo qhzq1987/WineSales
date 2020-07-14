@@ -1,0 +1,19 @@
+<view class="container">
+  <!-- 主体部分 -->
+  <view class="main-body">
+    <view class="left">
+      {{name}}
+    </view>
+    <view class="right">
+      <input class="text-input" 
+      type="{{inputType}}" 
+      placeholder="{{placeholder}}" 
+      placeholder-class="placeholder" 
+      maxlength="{{maxLength}}"
+      />
+    </view>
+  </view>
+  <!-- 分隔线 -->
+  <view class="seperator seperator-{{seperatorType}}"
+   wx:if="{{seperatorType == 'side' || seperatorType == 'left' || seperatorType == 'all'}}"></view>
+</view>

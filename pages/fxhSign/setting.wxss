@@ -1,0 +1,30 @@
+.cell-bg {
+  background-color: #ffffff;
+}
+.cell-bg .title {
+  font-size: 30rpx;
+  color: #666666;
+}
+.cell-bg .value {
+  font-size: 28rpx;
+  color: #222222;
+}
+.cell-bg .value-arrow {
+  font-size: 28rpx;
+  color: #222222;
+  margin-right: 20rpx;
+}
+.cell-bg .arrow {
+  height: 18rpx;
+  width: 18rpx;
+  margin-right: -6rpx;
+}
+.cell-bg .seperator {
+  margin-left: 30rpx;
+  height: 1rpx;
+  background-color: #F8F8F8;
+}
+.cell-bg .group-seperator {
+  height: 20rpx;
+  background-color: #f8f8f8;
+}

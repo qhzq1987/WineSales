@@ -1,0 +1,26 @@
+<!--address.wxml-->
+<view class="cell-bg">
+  <van-swipe-cell wx:for="{{addresses}}" wx:for-index="i" wx:key="i" right-width="{{ 70 }}" 
+    data-aid="{{i}}"
+    bind:click="onCellOpt">
+    <van-cell-group>
+      <van-cell center value-class="value" value="编辑">
+        <view slot="title">
+          <view>
+            <text class="name">{{item.name}}</text>
+            <text class="phone">{{item.phone}}</text>
+            <text class="default" wx:if="{{item.isDefault}}">默认地址</text>
+          </view>
+          <view class="address">{{item.address}}</view>
+        </view>
+      </van-cell>
+    </van-cell-group>
+    <view slot="right">删除</view>
+  </van-swipe-cell>
+  <!-- 对话框 -->
+  <van-dialog id="van-dialog"></van-dialog>
+</view>
+<!-- 新增地址 -->
+<view class="commit-button" bindtap="onNewAddress">
+  新增收货地址
+</view>

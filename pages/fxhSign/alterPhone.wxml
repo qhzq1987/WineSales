@@ -1,0 +1,18 @@
+<!--alterPhone.wxml-->
+<view class="cell-bg">
+  <van-cell-group>
+    <van-field wx:for="{{cells}}" wx:for-index="i" wx:key="i" label-class="name" input-class="input"
+      label="{{item.name}}" value="{{item.value}}" type="{{item.type}}" 
+      size="large" clearable
+      maxlength="{{item.maxlength}}"
+      placeholder="{{item.placeholder}}" 
+      placeholder-style="color:#aaaaaa;font-size:28rpx">
+    </van-field>
+    <!-- 验证码 -->
+    <validate-code></validate-code>
+  </van-cell-group>
+</view>
+<!-- 确认更换 -->
+<view class="commit-button" bindtap="onSubmitInfo">
+    确认更换
+</view>

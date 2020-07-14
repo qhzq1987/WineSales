@@ -1,0 +1,25 @@
+.container {
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: -20rpx;
+}
+.container .item {
+  width: 33.3%;
+}
+.container .item .img-container {
+  margin: 0rpx 10rpx 20rpx 10rpx;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+.container .item .img-container .img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.container .item .remove {
+  width: 32rpx;
+  height: 32rpx;
+}

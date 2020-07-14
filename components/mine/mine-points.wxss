@@ -1,0 +1,60 @@
+.container {
+  background-image: linear-gradient(to bottom right, #FEBF3E, #FFD89A);
+  border-radius: 16rpx;
+}
+.container .points-level {
+  display: flex;
+}
+.container .points-level .pts {
+  width: 50%;
+}
+.container .points-level .pts .title {
+  font-size: 24rpx;
+  color: #954C02;
+  padding-left: 30rpx;
+  padding-top: 32rpx;
+}
+.container .points-level .pts .value {
+  font-size: 48rpx;
+  color: #AC6012;
+  padding-left: 30rpx;
+  padding-top: 10rpx;
+}
+.container .points-level .level {
+  width: 50%;
+}
+.container .points-level .level .title {
+  background-color: #E3B887;
+  font-size: 22rpx;
+  color: #ffffff;
+  height: 34rpx;
+  width: 127rpx;
+  border-radius: 22rpx;
+  text-align: center;
+  float: right;
+  margin-top: 32rpx;
+  margin-right: 30rpx;
+}
+.container .points-level .level .value {
+  font-size: 44rpx;
+  color: #ffffff;
+  text-align: right;
+  padding-right: 30rpx;
+  margin-top: 80rpx;
+}
+.container .btm-items {
+  margin: 50rpx 30rpx 0rpx 30rpx;
+  display: flex;
+}
+.container .btm-items .item {
+  width: 33.3%;
+  text-align: center;
+  color: #AC6012;
+  padding-bottom: 30rpx;
+}
+.container .btm-items .item .value {
+  font-size: 40rpx;
+}
+.container .btm-items .item .name {
+  font-size: 24rpx;
+}

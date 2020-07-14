@@ -49,6 +49,8 @@ export default {
 	position: fixed;
 	bottom: 0;
 	z-index: 99;
+	padding-bottom: constant(safe-area-inset-bottom);
+	padding-bottom: env(safe-area-inset-bottom);
 	.favorit {
 		width: 32px;
 		height: 32px;

@@ -1,0 +1,33 @@
+.container {
+  background-color: #ffffff;
+  height: 100rpx;
+}
+.container .main-body {
+  margin: 0rpx 30rpx;
+  display: flex;
+}
+.container .main-body .left {
+  width: 180rpx;
+  font-size: 30rpx;
+  color: #666666;
+  line-height: 100rpx;
+}
+.container .main-body .middle {
+  flex: 1;
+}
+.container .main-body .middle .text-input {
+  height: 100rpx;
+  font-size: 28rpx;
+  color: #222222;
+}
+.container .main-body .right {
+  width: 194rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color: #3ABED1;
+  line-height: 100rpx;
+}
+.container .placeholder {
+  font-size: 28rpx;
+  color: #aaaaaa;
+}

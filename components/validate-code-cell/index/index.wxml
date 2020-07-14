@@ -1,0 +1,22 @@
+<view class="container">
+  <!-- 主体部分 -->
+  <view class="main-body">
+    <view class="left">
+      {{name}}
+    </view>
+    <view class="middle">
+      <input class="text-input" 
+      type="{{valueType}}" 
+      placeholder="{{placeholder}}" 
+      placeholder-class="placeholder" 
+      maxlength="6"
+      />
+    </view>
+    <view class="right" bindtap="onValidateCode">
+      {{btnName}}
+    </view>
+  </view>
+  <!-- 分隔线 -->
+  <!-- <view class="seperator seperator-{{seperatorType}}"
+   wx:if="{{seperatorType == 'side' || seperatorType == 'left' || seperatorType == 'all'}}"></view> -->
+</view>

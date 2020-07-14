@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "地址管理",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index"
+  }
+}

@@ -1,0 +1,16 @@
+<!--feedback.wxml-->
+<view class="container-bg">
+  <view class="real-field">
+    <textarea class="text" maxlength="300" 
+    placeholder-class="placeholder" placeholder="请简要描述您的问题和意见，限300字"></textarea>
+  </view>
+  <view class="images-container">
+    <images-add-opt></images-add-opt>
+    <view class="tips">选填：请提供问题及反馈截图，限9张</view>
+  </view>
+  
+</view>
+<!-- 确认提交 -->
+<view class="commit-button" bindtap="onSubmitInfo">
+  提交
+</view>

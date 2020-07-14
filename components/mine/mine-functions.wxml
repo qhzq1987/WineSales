@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="title">{{title}}</view>
+  <view class="type-items">
+    <view class="item" wx:for="{{showTypes}}" wx:for-index="i" wx:key="i" data-tid="{{i}}" bindtap="onItemType">
+      <image class="img" src="{{item.icon}}"></image>
+      <view class="name">{{item.name}}</view>
+    </view>
+  </view>
+</view>

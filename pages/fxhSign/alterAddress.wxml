@@ -1,0 +1,31 @@
+<!--alterAddress.wxml-->
+<view class="cell-bg">
+  <van-cell-group>
+    <van-field wx:for="{{cells}}" wx:for-index="i" wx:key="i" label-class="name" input-class="input"
+      label="{{item.name}}" value="{{item.value}}" type="{{item.type}}" 
+      size="large" clearable
+      readonly="{{item.readonly}}" 
+      placeholder="{{item.placeholder}}"
+      placeholder-style="color:#aaaaaa;font-size:28rpx">
+      <!-- 是否需要显示箭头 -->
+      <view wx:if="{{item.arrow}}" slot="right-icon">
+        <image class="arrow" src="../../images/arrow-right.png"></image>
+      </view>
+    </van-field>
+    <!-- 标签 -->
+    <van-cell title-class="name" value-class="value-zone" title="标签">
+      <view slot="">
+        <text class="tag">家</text>
+        <text class="tag tag-not-frist">公司</text>
+      </view>
+    </van-cell>
+  </van-cell-group>
+</view>
+<!-- 保存 -->
+<view class="commit-button" bindtap="onSubmitInfo">
+  保存
+</view>
+<!-- 取消或是删除 -->
+<view class="cancel-button" bindtap="onSubmitInfo">
+  {{cancelTitle}}
+</view>
