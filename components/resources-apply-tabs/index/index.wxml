@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="e-zone">
+    <block wx:for="{{tabs}}" wx:for-index="i" wx:key="i">
+      <view class="item {{selectedIndex == i ? 'item-active' : 'item-normal'}}" data-aid="{{i}}"
+        bindtap="onClick">
+        {{item}}
+      </view>
+    </block>
+  </view>
+</view>

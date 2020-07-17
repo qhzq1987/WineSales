@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "我的资源",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "applying-tabs": "/components/resources-apply-tabs/index/index",
+    "applying-cell": "/components/resources-applying-cell/index/index",
+    "confirm-cell": "/components/resources-confirm-cell/index/index"
+  }
+}

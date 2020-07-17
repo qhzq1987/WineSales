@@ -1,0 +1,49 @@
+.container {
+  background-color: #ffffff;
+  .cell {
+    display: flex;
+    position: relative;
+    .left {
+      width: 330rpx;
+      height: 246rpx;
+      .img {
+        margin-left: 30rpx;
+        margin-top: 30rpx;
+        width: 280rpx;
+        height: 186rpx;
+        background-color: #f8f8f8;
+        border-radius: 10rpx;
+      }
+    }
+    .right {
+      flex: 1;
+      .company {
+        font-size: 30rpx;
+        color: #222222;
+        margin-top: 30rpx;
+      }
+      .date {
+        font-size: 26rpx;
+        color: #666666;
+        margin-top: 15rpx;
+      }
+      .project {
+        font-size: 24rpx;
+        color: #aaaaaa;
+        margin-top: 15rpx;
+      }
+    }
+    .img-status {
+      position: absolute;
+      right: 0rpx;
+      width: 92rpx;
+      height: 92rpx;
+    }
+  }
+  .seperator {
+    margin-right: 30rpx;
+    margin-left: 30rpx;
+    height: 1rpx;
+    background-color: #eeeeee;
+  }
+}

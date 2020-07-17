@@ -1,0 +1,21 @@
+<!--/msgCenter.wxml-->
+<view class="cell-bg">
+  <van-cell-group>
+    <block wx:for="{{messages}}" wx:for-index="i" wx:key="i">
+      <!-- 分隔线 -->
+      <view class="seperator" wx:if="{{i > 0}}"></view>
+      <!-- CELL内容 -->
+      <view class="cell">
+        <view class="left">
+          <image class="img" src="{{item.typeImg}}"></image>
+        </view>
+        <!-- 右半部分 -->
+        <view class="right">
+          <text class="date-tm">{{item.fmtTm}}</text>
+          <view class="title">{{item.title}}</view>
+          <view class="sub-title">{{item.subTitle}}</view>
+        </view>
+      </view>
+    </block>
+  </van-cell-group>
+</view>

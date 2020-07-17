@@ -1,0 +1,15 @@
+.cell-bg {
+  background-color: #ffffff;
+}
+.cell-bg .title {
+  font-size: 28rpx;
+  color: #333333;
+}
+.cell-bg .sub-title {
+  font-size: 26rpx;
+  color: #999999;
+}
+.cell-bg .arrow {
+  width: 18rpx;
+  height: 18rpx;
+}

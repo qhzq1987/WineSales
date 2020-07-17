@@ -107,15 +107,42 @@ Page({
    */
   onFxcluster: function (event) {
     console.log('onFxcluster' + event.detail)
+    // 类型
+    var url = ''
+    switch (event.detail) {
+      case 1:
+        url = 'my-activities'
+        break
+      case 2:
+        url = 'myResources'
+        break
+    }
+    // 跳转
+    wx.navigateTo({
+      url: url
+    })
   },
 
   /**
    * 其他功能模块"跳转"事件处理
    */
   onOthers: function (event) {
-    // 先跳转”设置“
+    // 类型
+    var url = ''
+    switch (event.detail) {
+      case 0:
+        url = 'msgCenter'
+        break
+      case 2:
+        url = 'helpCenter'
+        break
+      case 3:
+        url = 'setting'
+        break
+    }
+    // 跳转
     wx.navigateTo({
-      url: 'setting'
+      url: url
     })
   }
 })

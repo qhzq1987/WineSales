@@ -1,8 +1,7 @@
 {
-  "navigationBarTitleText": "帮助中心",
+  "navigationBarTitleText": "消息中心",
   "navigationBarBackgroundColor": "#ffffff",
   "usingComponents": {
-    "van-nav-bar": "@vant/weapp/nav-bar/index",
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index"
   }

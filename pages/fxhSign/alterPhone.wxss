@@ -1,6 +1,3 @@
-page {
-  background-color: #f8f8f8;
-}
 .cell-bg {
   margin-top: 20rpx;
   background-color: #ffffff;

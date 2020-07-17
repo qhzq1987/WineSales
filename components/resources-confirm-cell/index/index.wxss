@@ -1,0 +1,29 @@
+.container {
+  background-color: #ffffff;
+}
+.container .cell-4564 {
+  position: relative;
+  padding: 20rpx 0rpx;
+  margin: 0rpx 30rpx;
+}
+.container .cell-4564 .dateTm {
+  position: absolute;
+  right: 0rpx;
+  font-size: 22rpx;
+  color: #aaaaaa;
+}
+.container .cell-4564 .title {
+  font-size: 30rpx;
+  color: #222222;
+}
+.container .cell-4564 .content {
+  font-size: 26rpx;
+  color: #666666;
+  padding-top: 10rpx;
+}
+.container .seperator {
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+  height: 1rpx;
+  background-color: #eeeeee;
+}

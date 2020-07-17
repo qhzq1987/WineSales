@@ -1,0 +1,15 @@
+<!--helpCenter.wxml-->
+<view class="cell-bg">
+  <van-cell-group>
+    <!-- 标题 -->
+    <view class="group-title">常见问题指引</view>
+    <!-- 列表 -->
+    <block wx:for="{{helps}}" wx:for-index="i" wx:key="i">
+      <van-cell center title-class="title" title="{{item.title}}">
+        <view slot="right-icon">
+          <image class="arrow" src="../../images/arrow-right.png"></image>
+        </view>
+      </van-cell>
+    </block>
+  </van-cell-group>
+</view>

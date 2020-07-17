@@ -1,0 +1,9 @@
+<view class="container">
+  <!-- 分隔线 -->
+  <view class="seperator" wx:if="{{showSeperator}}"></view>
+  <view class="cell-4564">
+    <view class="dateTm">{{cellData.dateTime}}</view>
+    <view class="title">{{cellData.title}}</view>
+    <view class="content">{{cellData.content}}</view>
+  </view>
+</view>

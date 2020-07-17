@@ -1,0 +1,48 @@
+.cell-bg {
+  background-color: #ffffff;
+}
+.cell-bg .cell {
+  display: flex;
+}
+.cell-bg .left {
+  width: 144rpx;
+}
+.cell-bg .left .img {
+  margin: 24rpx 0rpx 14rpx 30rpx;
+  width: 90rpx;
+  height: 90rpx;
+}
+.cell-bg .right {
+  position: relative;
+  flex: 1;
+}
+.cell-bg .right .title {
+  font-size: 30rpx;
+  color: #222222;
+  margin-top: 26rpx;
+}
+.cell-bg .right .date-tm {
+  position: absolute;
+  right: 30rpx;
+  top: 26rpx;
+  font-size: 22rpx;
+  color: #aaaaaa;
+}
+.cell-bg .right .sub-title {
+  font-size: 26rpx;
+  color: #666666;
+  margin-top: 4rpx;
+  margin-right: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: box;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.cell-bg .seperator {
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+  height: 1rpx;
+  background-color: #eeeeee;
+}

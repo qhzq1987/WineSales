@@ -1,0 +1,68 @@
+<van-nav-bar custom-class="group-all-nav-bar" title="我的社群" border="{{false}}" title-class="titleClass" fixed>
+    <view slot="left">
+        <view class="nav-left-part">
+            <view>
+                <van-icon name="arrow-left" />
+            </view>
+            <view>
+                <van-icon name="wap-home" />
+            </view>
+        </view>
+    </view>
+</van-nav-bar>
+<!-- 滚动信息 -->
+<scroll-view class="main-container" scroll-y>
+    <!-- 基本信息 -->
+    <view class="header-bg">
+        <view class="base-info">
+            <image class="img-status" src="../../images/my-activities-going.png"></image>
+            <view class="left">
+                <image class="img"></image>
+            </view>
+            <view class="right">
+                <view class="name">{{name}}</view>
+                <view class="sub-name">{{subName}}</view>
+            </view>
+        </view>
+        <view class="tm-address">时间：{{tm}}</view>
+        <view class="tm-address">地址：{{address}}</view>
+        <view class="view-detail" bindtap="onGoDetail">
+            查看活动详情
+            <image class="arrow" src="../../images/arrow-right.png"></image>
+        </view>
+    </view>
+    <!-- 报名信息 -->
+    <view class="cell-info-bg">
+        <view class="info-title">报名信息</view>
+        <view class="user-info">
+            <view class="left">
+                <image class="img"></image>
+            </view>
+            <view class="right">
+                <view class="name">{{userName}}</view>
+                <view class="phone">{{phone}}</view>
+            </view>
+        </view>
+        <view class="seperator"></view>
+        <van-cell-group border="{{false}}">
+            <block wx:for="{{infoCells}}" wx:for-index="i" wx:key="i">
+                <van-field label-class="cell-name" input-class="cell-value" value="{{item.value}}" label="{{item.name}}"
+                    disabled="true"></van-field>
+            </block>
+        </van-cell-group>
+    </view>
+    <!-- 缴费信息 -->
+    <view class="cell-info-bg">
+        <view class="info-title">缴费信息</view>
+        <van-cell-group border="{{false}}">
+            <block wx:for="{{feeCells}}" wx:for-index="i" wx:key="i">
+                <van-field label-class="cell-name" input-class="cell-value" value="{{item.value}}" label="{{item.name}}"
+                    disabled="true"></van-field>
+            </block>
+        </van-cell-group>
+    </view>
+</scroll-view>
+<!-- 取消按钮 -->
+<view class="opt-button" bindtap="onCancel">
+    申请取消报名
+</view>

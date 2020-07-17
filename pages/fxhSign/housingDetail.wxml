@@ -1,0 +1,17 @@
+<!--housingDetail.wxml-->
+<view class="hedader-bg">
+  <view class="room">{{roomName}}</view>
+  <view class="address">{{address}}</view>
+</view>
+<!-- 房产详情 -->
+<view class="cell-bg">
+  <view class="info-title">房产详细信息</view>
+  <view class="seperator"></view>
+  <van-cell-group border="{{false}}">
+    <!-- 列表 -->
+    <block wx:for="{{details}}" wx:for-index="i" wx:key="i">
+      <van-cell center title-class="title" value-class="value" title="{{item.name}}" value="{{item.value}}">
+      </van-cell>
+    </block>
+  </van-cell-group>
+</view>

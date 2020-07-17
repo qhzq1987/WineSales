@@ -1,0 +1,16 @@
+<view class="container">
+  <!-- 分隔线 -->
+  <view class="seperator" wx:if="{{showSeperator}}"></view>
+  <view class="cell">
+    <view class="left">
+      <image class="img" src="{{cellData.imgUrl}}"></image>
+    </view>
+    <view class="right">
+      <view class="company">{{cellData.company}}</view>
+      <view class="date">{{cellData.fmtDate}} 申请</view>
+      <view class="project">{{cellData.project}}</view>
+    </view>
+    <!-- 当前状态 -->
+    <image class="img-status" src="{{cellData.statusImg}}"></image>
+  </view>
+</view>

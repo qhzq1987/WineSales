@@ -1,0 +1,30 @@
+<!--myResources.wxml-->
+<van-tabs color="#3ABED1" title-active-color="#3ABED1" line-width="28" sticky swipeable active="{{segIndex}}"
+  bind:change="onTypeChange">
+  <van-tab title="我申请的">
+    <!-- 二级”过滤“标签 -->
+    <applying-tabs bind:tabchanged="onApplyingChange"></applying-tabs>
+    <!-- 列表 -->
+    <van-cell-group>
+      <block wx:for="{{applyings}}" wx:for-index="i" wx:key="i">
+        <applying-cell cell-data="{{item}}" show-seperator="{{i > 0}}"></applying-cell>
+      </block>
+    </van-cell-group>
+  </van-tab>
+  <van-tab title="待我确认">
+    <!-- 列表 -->
+    <van-cell-group>
+      <block wx:for="{{confirms}}" wx:for-index="i" wx:key="i">
+        <confirm-cell cell-data="{{item}}" show-seperator="{{i > 0}}"></confirm-cell>
+      </block>
+    </van-cell-group>
+  </van-tab>
+  <van-tab title="我沟通的">
+    <!-- 列表 -->
+    <van-cell-group>
+      <block wx:for="{{communicatings}}" wx:for-index="i" wx:key="i">
+        <confirm-cell cell-data="{{item}}" show-seperator="{{i > 0}}"></confirm-cell>
+      </block>
+    </van-cell-group>
+  </van-tab>
+</van-tabs>
